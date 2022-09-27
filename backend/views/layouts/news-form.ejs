@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Form Repeater | Veltrix - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="Themesbrand" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+<body data-sidebar="dark">
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="index.ejs" class="logo logo-dark">
+                            <span class="logo-sm">
+                                <img src="assets/images/logo-sm.png" alt="" height="22">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/logo-dark.png" alt="" height="17">
+                            </span>
+                        </a>
+
+                        <a href="index.ejs" class="logo logo-light">
+                            <span class="logo-sm">
+                                <img src="assets/images/logo-sm.png" alt="" height="32">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/logo-light.png" alt="" height="45">
+                            </span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect"
+                        id="vertical-menu-btn">
+                        <i class="mdi mdi-menu"></i>
+                    </button>
+
+
+                </div>
+
+                <div class="d-flex">
+
+
+                    <div class="dropdown d-none d-md-block ms-2">
+                        <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img class="me-2" src="assets/images/flags/us_flag.jpg" alt="Header Language" height="16">
+                            English
+                        </button>
+
+                    </div>
+
+                    <div class="dropdown d-none d-lg-inline-block">
+                        <button type="button" class="btn header-item noti-icon waves-effect"
+                            data-bs-toggle="fullscreen">
+                            <i class="mdi mdi-fullscreen"></i>
+                        </button>
+                    </div>
+
+
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="rounded-circle header-profile-user" src="assets/images/users/user-4.jpg"
+                                alt="Header Avatar">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <a class="dropdown-item text-danger" href="#"><i
+                                    class="bx bx-power-off font-size-17 align-middle me-1 text-danger"></i> Logout</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li class="menu-title">Main</li>
+
+                        <li>
+                            <a href="index.ejs" class="waves-effect">
+                                <i class="ti-home"></i><span class="badge rounded-pill bg-primary float-end">1</span>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ti-blackboard"></i>
+                                <span>News</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="news-list.ejs">List</a></li>
+                                <li><a href="news-form.ejs">Post a News</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ti-user"></i>
+                                <span>Careers</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="email-inbox.ejs">List</a></li>
+                                <li><a href="form-repeater.ejs">Post a Job</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ti-archive"></i>
+                                <span> Authentication </span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="pages-register.ejs">Register 1</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="page-title-box">
+                        <div class="row align-items-center">
+
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+
+
+                    <!-- <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Example</h4>
+                                    <form class="repeater" enctype="multipart/form-data">
+                                        <div data-repeater-list="group-a">
+                                            <div class="row" data-repeater-item>
+                                                <div class="mb-3 col-lg-2">
+                                                    <label class="form-label" for="name">Name</label>
+                                                    <input type="text" id="name" name="untyped-input" class="form-control" placeholder="Enter your name" />
+                                                </div>
+                                                <!-- end col -->
+                    <!-- <div class="mb-3 col-lg-2">
+                                                    <label class="form-label" for="email">Email</label>
+                                                    <input type="email" id="email" class="form-control" placeholder="Enter your email" />
+                                                </div> -->
+                    <!-- end col -->
+                    <!-- <div class="mb-3 col-lg-2">
+                                                    <label class="form-label" for="subject">Subject</label>
+                                                    <input type="text" id="subject" class="form-control" placeholder="Enter your subject" />
+                                                </div> -->
+                    <!-- end col -->
+                    <!-- <div class="mb-3 col-lg-2">
+                                                    <label class="form-label" for="resume">Resume</label>
+                                                    <input type="file" class="form-control" id="resume">
+
+                                                </div> -->
+                    <!-- end col -->
+                    <!-- <div class="mb-3 col-lg-2 col-sm-8">
+                                                    <label class="form-label" for="message">Message</label>
+                                                    <textarea id="message" class="form-control" placeholder="Type here..."></textarea>
+                                                </div> -->
+                    <!-- end col -->
+                    <!-- <div class="col-lg-2 col-sm-4 align-self-center">
+                                                    <div class="d-grid">
+                                                        <input data-repeater-delete type="button" class="btn btn-primary mb-2" value="Delete" />
+                                                    </div>
+                                                </div> -->
+                    <!-- end col -->
+                    <!-- </div> -->
+                    <!-- end row -->
+                    <!-- </div>
+                                        <input data-repeater-create type="button" class="btn btn-success mt-2 mt-sm-0" value="Add" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- end row -->
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">News</h4>
+                                    <form class="outer-repeater">
+                                        <div data-repeater-list="outer-group" class="outer">
+                                            <div data-repeater-item class="outer">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="formauthor">Author :</label>
+                                                    <input type="text" class="form-control" id="formauthor"
+                                                        placeholder="admin">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="formcategory">Category :</label>
+                                                    <input type="text" class="form-control" id="formcategory"
+                                                        placeholder="Transport">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="formdescription">Short Description
+                                                        :</label>
+                                                    <textarea id="formdescription" class="form-control" rows="3"
+                                                        placeholder="Type text..."></textarea>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="formnewshead">News Head :</label>
+                                                    <input type="text" class="form-control" id="formnewshead"
+                                                        placeholder="Industry News">
+                                                </div>
+                                                <div class="inner-repeater mb-4">
+                                                    <div data-repeater-list="inner-group" class="inner mb-3">
+                                                        <label class="form-label">Content Data :</label>
+                                                        <div data-repeater-item class="inner mb-3 row">
+                                                            <div class="col-md-10 col-sm-8">
+                                                                <textarea id="formparagraph"
+                                                                    class="paragraphtext form-control" rows="3"
+                                                                    placeholder="Type text..."></textarea>
+                                                            </div>
+                                                            <div class="col-md-2 col-sm-4">
+                                                                <div class="d-grid">
+                                                                    <input data-repeater-delete type="button"
+                                                                        class="btn btn-primary inner mt-2 mt-sm-0"
+                                                                        value="Delete" />
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <input data-repeater-create type="button"
+                                                        class="btn btn-success inner" value="Add Paragraph" />
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="formblockquote">Blockquote :</label>
+                                                    <textarea id="formblockquote" class="form-control" rows="3"
+                                                        placeholder="Type text..."></textarea>
+                                                </div>
+
+
+
+
+                                                <!-- <div class="mb-3">
+                                                    <label class="form-label mb-3 d-flex">Gender :</label>
+                                                    <div class="form-check form-check-inline">
+                                                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="form-check-input">
+                                                        <label class="form-check-label" for="customRadioInline1">Male</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="form-check-input">
+                                                        <label class="form-check-label" for="customRadioInline2">Female</label>
+                                                    </div>
+                                                </div> -->
+
+                                                <!-- <div class="mb-3">
+                                                    <label class="form-label" for="formmessage">Message :</label>
+                                                    <textarea id="formmessage" class="form-control" rows="3" placeholder="Type text..."></textarea>
+                                                </div> -->
+                                                <button id="submit_btn" type="button"
+                                                    class="btn btn-primary">Submit</button>
+
+
+
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- end form -->
+                                </div>
+                                <!-- end cardbody -->
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end row -->
+
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            ©
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> SAMC<span class="d-none d-sm-inline-block"> - Created by <a
+                                    href="https://www.psybox.io">Psybox LLC.</a></span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- form repeater js -->
+    <script src="assets/libs/jquery.repeater/jquery.repeater.min.js"></script>
+
+    <script src="assets/js/pages/form-repeater.int.js"></script>
+
+    <script src="assets/js/app.js"></script>
+
+
+    <!-- Data add to database
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+    -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#submit_btn").click(function () {
+                var a = document.getElementById("formauthor").value;
+                var c = document.getElementById("formcategory").value;
+                var d = document.getElementById("formdescription").value;
+                var n = document.getElementById("formnewshead").value;
+                var cd = document.getElementsByClassName("paragraphtext");
+                var b = document.getElementById("formblockquote").value;
+                var paragraphtext = "";
+                var myHeaders = new Headers();
+                myHeaders.append("Content-Type", "application/json");
+
+                if (cd.length > 0) {
+                    cd.forEach((item) => {
+                        paragraphtext = paragraphtext + item.value + '|+|';
+                    })
+                }
+
+                var raw = JSON.stringify({
+                    "author": a,
+                    "category": c,
+                    "shortDescription": d,
+                    "newsHead": n,
+                    "contentData": paragraphtext,
+                    "blockQuote": b
+                });
+
+                var requestOptions = {
+                    method: 'POST',
+                    headers: myHeaders,
+                    body: raw,
+                    redirect: 'follow'
+                };
+
+                fetch("http://localhost:5000/api/news", requestOptions)
+                    .then(response => response.json())
+                    .then(result => {
+                        alert(result.status.data_saved ? "Submited !" : "Error !");
+                        console.log(result)
+                    })
+                    .catch(error => console.log('error', error));
+            })
+        });
+    </script>
+
+
+</body>
+
+</html>
