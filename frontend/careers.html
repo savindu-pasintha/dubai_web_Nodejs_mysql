@@ -695,7 +695,9 @@
                             if (result?.data) {
                                 if (result.data.length > 0) {
                                     var all_content = ``;
-                                    for (let i = 0; i < result.data.length; i++) {
+                                    var desendingOrder = result.data.reverse();
+
+                                    for (let i = 0; i < desendingOrder.length; i++) {
                                         var item = result.data[i];
                                         var jobTitle = item?.jobTitle,
                                             shortDescription = item?.shortDescription,

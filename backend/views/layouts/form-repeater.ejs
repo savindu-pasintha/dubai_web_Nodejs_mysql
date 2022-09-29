@@ -262,6 +262,13 @@
                                                         placeholder="Enter Date">
                                                 </div>
 
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="formenddate">Image Url</label>
+                                                    <input type="text" class="form-control" id="imageUrl"
+                                                        placeholder="https://example/image.png">
+                                                </div>
+
+
                                                 <div class="inner-repeater mb-4">
                                                     <div data-repeater-list="inner-group" class="inner mb-3">
                                                         <label class="form-label">Responsibilities :</label>
@@ -395,6 +402,7 @@
                 var l = document.getElementById("formlocation").value;
                 var p = document.getElementById("formposition").value;
                 var e = document.getElementById("formenddate").value;
+                var i = document.getElementById("imageUrl").value;
                 //var r = document.getElementById("formresponsibilities").value;
                 var r = document.getElementsByClassName("responsibility");
                 var responsbilityes = "";
@@ -425,7 +433,8 @@
                     "positions": p,
                     "endDate": e,
                     "resposibilities": responsbilityes,
-                    "qualifications": qualifications
+                    "qualifications": qualifications,
+                    "image": i
                 });
                 var requestOptions = {
                     method: 'POST',

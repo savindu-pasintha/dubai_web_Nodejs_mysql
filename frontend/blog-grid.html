@@ -532,18 +532,24 @@
     <script type="text/javascript" src="javascript/jquery-countTo.js"></script>
     <script type="text/javascript" src="javascript/jquery.cookie.js"></script>
     <script type="text/javascript" src="javascript/parallax.js"></script>
-    <script type="text/javascript" src="javascript/main.js"></script>
+    <!-- script type="text/javascript" src="javascript/main.js"></script -->
 
     <!-- load the career section content-->
     <script type="text/javascript">
+        var dataSet = [];//href="blog-single.html"
         $(document).ready(function () {
-
             function arrangeContent(author, category, shortDescription, newsHead, contentData, blockQuote, image) {
                 return `<article class="flat-item item-three-column blog-post">
                                         <div class="entry-wrapper">
-                                            <div class="entry-cover">
-                                                <a href="blog-single.html">
-                                                    <img src="images/blog/b5.jpg" alt="images">
+                                            <p id="newsHead_id" style="visibility:hidden">${newsHead}</p>
+                                            
+                                            <div  class="entry-cover">
+                                                <a  onClick="(function(){
+    
+    callit();
+    return false;
+})();return false;">                      
+                                                    <img id="image_id" style="width:100%;" src='${image ? image.toString() : ''}' alt="images">
                                                 </a>
                                             </div>
                                             <div class="entry-header">
@@ -553,28 +559,26 @@
                                                         <span class="entry-month">Mar</span>
                                                     </h4>
                                                     <h4 class="entry-title">
-                                                        <a href="blog-single.html">${shortDescription}</a>
+                                                        <a id="shortDescription_id" href="blog-single.html">${shortDescription}</a>
                                                     </h4>
                                                 </div>
                                             </div>
                                             <div class="entry-content">
-                                               <p>${contentData}</p>
+                                               <p id="content_id">${contentData}</p>
                                                 </div>
                                             <div class="entry-footer">
                                                 <div class="entry-meta">
                                                     <i class="fa fa-user"></i>
-                                                    <span class="entry-author"><a href="#">${author}</a></span>
+                                                    <span class="entry-author"><a id="author_id" href="#">${author}</a></span>
                                                     <i class="fa fa-folder-open"></i>
-                                                    <span class="entry-categories"><a href="#">${category}</a></span>
+                                                    <span class="entry-categories"><a id="category_id" href="#">${category}</a></span>
                                                     <i class="fa fa-comment"></i>
-                                                    <span class="entry-comments-link"><a href="#">${blockQuote} Comment</a></span>
+                                                    <span class="entry-comments-link"><a id="block_id" href="#">${blockQuote} Comment</a></span>
                                                 </div>
                                             </div>
                                         </div>
                                     </article>`
             };
-
-
             var requestOptions = {
                 method: 'GET',
                 redirect: 'follow'
@@ -588,7 +592,9 @@
                             if (result?.data) {
                                 if (result.data.length > 0) {
                                     var all_content = ``;
-                                    for (let i = 0; i < result.data.length; i++) {
+                                    var desendingOrder = result.data.reverse();
+                                    dataSet = desendingOrder;
+                                    for (let i = 0; i < desendingOrder.length; i++) {
                                         var item = result.data[i];
                                         var author = item?.author,
                                             category = item?.category,
@@ -596,7 +602,7 @@
                                             newsHead = item?.newsHead,
                                             contentData = item?.contentData,
                                             blockQuote = item?.blockQuote,
-                                            image = item?.imageurl;
+                                            image = item?.image;
 
                                         all_content = all_content + arrangeContent(author, category, shortDescription, newsHead, contentData, blockQuote, image);
                                     }
@@ -613,15 +619,28 @@
 
                     }
 
-                    console.log(result)
+
                 })
                 .catch(error => {
                     $.getScript('javascript/main.js', function () {
                     });
                     console.log('error', error);
                 });
-
         });
+    </script>
+    <script type="text/javascript">
+        function callit() {
+            window.localStorage.clear();
+            console.log("clicked !");
+            localStorage.setItem("author", document.getElementById("author_id").innerHTML);
+            localStorage.setItem("category", document.getElementById("category_id").innerHTML);
+            localStorage.setItem("shortDescription", document.getElementById('shortDescription_id').innerHTML);
+            localStorage.setItem("newsHead", document.getElementById('newsHead_id').innerText);
+            localStorage.setItem("contentData", document.getElementById('content_id').innerHTML);
+            localStorage.setItem("blockQuote", document.getElementById('block_id').innerHTML);
+            localStorage.setItem("image", document.getElementById('image_id').src);
+            window.location.href = "blog-single.html";
+        }
     </script>
     <!--script type="text/javascript" src="javascript/main.js"></script-->
 

@@ -12,7 +12,7 @@ router.post('/career', function (req, res, next) {
         positions,
         endDate,
         resposibilities,
-        qualifications }
+        qualifications, image }
         = {
         jobTitle: req.body?.jobTitle.toString(),
         location: req.body?.location.toString(),
@@ -20,7 +20,8 @@ router.post('/career', function (req, res, next) {
         positions: req.body?.positions.toString(),
         endDate: req.body?.endDate.toString(),
         resposibilities: req.body?.resposibilities.toString(),
-        qualifications: req.body?.qualifications.toString()
+        qualifications: req.body?.qualifications.toString(),
+        image: req.body?.image.toString()
     };
     if (jobTitle &&
         shortDescription &&
@@ -29,7 +30,7 @@ router.post('/career', function (req, res, next) {
         endDate &&
         resposibilities &&
         qualifications) {
-        var query = `INSERT INTO career (jobTitle,shortDescription,location,positions,endDate,resposibilities,qualifications) VALUES ('${jobTitle}','${shortDescription}','${location}','${positions}','${endDate}','${resposibilities}','${qualifications}')`;
+        var query = `INSERT INTO career (jobTitle,shortDescription,location,positions,endDate,resposibilities,qualifications,image) VALUES ('${jobTitle}','${shortDescription}','${location}','${positions}','${endDate}','${resposibilities}','${qualifications}','${image}')`;
         QueryExecute(query)
             .then((result) => {
                 if (result) {

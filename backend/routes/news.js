@@ -48,7 +48,7 @@ router.post('/news', function (req, res, next) {
 });
 
 router.get('/news', function (req, res, next) {
-    var query = "SELECT author,category,shortDescription,newsHead,contentData,blockQuote FROM news ";
+    var query = "SELECT author,category,shortDescription,newsHead,contentData,blockQuote,image FROM news ";
     QueryExecute(query)
         .then((result) => {
             console.log(result)
