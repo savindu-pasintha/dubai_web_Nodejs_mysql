@@ -29,7 +29,6 @@ router.post('/career', function (req, res, next) {
         endDate &&
         resposibilities &&
         qualifications) {
-            console.log("hellooooo");
         var query = `INSERT INTO career (jobTitle,shortDescription,location,positions,endDate,resposibilities,qualifications) VALUES ('${jobTitle}','${shortDescription}','${location}','${positions}','${endDate}','${resposibilities}','${qualifications}')`;
         console.log(query);
         QueryExecute(query)
