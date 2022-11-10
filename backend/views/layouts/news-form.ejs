@@ -109,12 +109,12 @@
                     <ul class="metismenu list-unstyled" id="side-menu">
                         <li class="menu-title">Main</li>
 
-                        <li>
+                        <!-- <li>
                             <a href="index.ejs" class="waves-effect">
                                 <i class="ti-home"></i><span class="badge rounded-pill bg-primary float-end">1</span>
                                 <span>Dashboard</span>
                             </a>
-                        </li>
+                        </li> -->
 
                         <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -138,7 +138,7 @@
                             </ul>
                         </li>
 
-                        <li>
+                        <!-- <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect">
                                 <i class="ti-archive"></i>
                                 <span> Authentication </span>
@@ -146,7 +146,7 @@
                             <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="pages-register.ejs">Register 1</a></li>
                             </ul>
-                        </li>
+                        </li> -->
 
                     </ul>
                 </div>
@@ -255,6 +255,13 @@
                                                     <input type="text" class="form-control" id="formnewshead"
                                                         placeholder="Industry News">
                                                 </div>
+
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="formenddate">Image Url</label>
+                                                    <input type="text" class="form-control" id="imageUrl"
+                                                        placeholder="https://example/image.png">
+                                                </div>
+
                                                 <div class="inner-repeater mb-4">
                                                     <div data-repeater-list="inner-group" class="inner mb-3">
                                                         <label class="form-label">Content Data :</label>
@@ -377,6 +384,7 @@
                 var n = document.getElementById("formnewshead").value;
                 var cd = document.getElementsByClassName("paragraphtext");
                 var b = document.getElementById("formblockquote").value;
+                var i = document.getElementById("imageUrl").value;
                 var paragraphtext = "";
                 var myHeaders = new Headers();
                 myHeaders.append("Content-Type", "application/json");
@@ -393,7 +401,8 @@
                     "shortDescription": d,
                     "newsHead": n,
                     "contentData": paragraphtext,
-                    "blockQuote": b
+                    "blockQuote": b,
+                    "image": i
                 });
 
                 var requestOptions = {

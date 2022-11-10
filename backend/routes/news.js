@@ -13,13 +13,14 @@ router.post('/news', function (req, res, next) {
         shortDescription,
         newsHead,
         contentData,
-        blockQuote } = {
+        blockQuote, image  } = {
         author: req.body?.author.toString(),
         category: req.body?.category.toString(),
         shortDescription: req.body?.shortDescription.toString(),
         newsHead: req.body?.newsHead.toString(),
         contentData: req.body?.contentData.toString(),
-        blockQuote: req.body?.blockQuote.toString()
+        blockQuote: req.body?.blockQuote.toString(),
+        image: req.body?.image.toString()
 
     };
     if (author &&
@@ -28,7 +29,7 @@ router.post('/news', function (req, res, next) {
         newsHead &&
         contentData &&
         blockQuote) {
-        var query = `INSERT INTO news (author,category,shortDescription,newsHead,contentData,blockQuote) VALUES ('${author}','${category}','${shortDescription}','${newsHead}','${contentData}','${blockQuote}')`;
+        var query = `INSERT INTO news (author,category,shortDescription,newsHead,contentData,blockQuote,image) VALUES ('${author}','${category}','${shortDescription}','${newsHead}','${contentData}','${blockQuote}','${image}')`;
         QueryExecute(query)
             .then((result) => {
                 if (result) {
