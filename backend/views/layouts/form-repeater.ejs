@@ -433,7 +433,7 @@
                     body: raw,
                     redirect: 'follow'
                 };
-                fetch("http://104.154.52.170:5000/api/career", requestOptions)
+                fetch("https://api.salemalmakranicargo.ae/api/career", requestOptions)
                     .then(response => response.json())
                     .then(result => {
                         alert(result.status.data_saved ? "Submited !" : "Error !");

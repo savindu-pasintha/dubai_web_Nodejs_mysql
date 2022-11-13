@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));//extended: true  =   content type :  form-data not support*   raw , x-ww-form-urlencodel support
-app.use(cors({ origin: ["http://104.154.52.170","http://104.154.52.170:5000","http://salemalmakranicargo.ae"] }));//Add your front end url to avoid the cors error
+app.use(cors({ origin: ["https://salemalmakranicargo.ae", "https://api.salemalmakranicargo.ae"] }));//Add your front end url to avoid the cors error
 app.use(logger('dev'));
 app.use(cookieParser());
 
