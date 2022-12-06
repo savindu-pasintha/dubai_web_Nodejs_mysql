@@ -89,6 +89,12 @@
     position: relative;
     padding: 50px 0;    
 }
+.flat-row1 {
+    clear: both;
+    display: block;
+    position: relative;
+    padding: 50px 0;
+}
 
 .overlay {
     position: absolute;

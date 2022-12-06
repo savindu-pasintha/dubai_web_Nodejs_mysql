@@ -487,6 +487,28 @@
                 });
             }
         });
+
+    }
+    var popupText = function () {
+        console.log("yo................")
+        $('.flat-row1').each(function () {
+            if ($('area').hasClass('popup-text')) {
+                $(".popup-text").magnificPopup({
+                    type: "text",
+                    tLoading: "Loading text #%curr%...",
+                    removalDelay: 600,
+                    mainClass: "my-mfp-slide-bottom",
+                    gallery: {
+                        enabled: true,
+                        navigateByImgClick: true,
+                        preload: [0, 1]
+                    },
+                    // image: {
+                    //     tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+                    // }
+                });
+            }
+        });
     }
 
     var flatAccordion = function () {
@@ -657,6 +679,7 @@
         goTop();
         swClick();
         popupGallery();
+        popupText();
         flatFilterPrice();
         generalSlider();
         portfolioIsotope();
