@@ -487,14 +487,15 @@
                 });
             }
         });
-
     }
+
+
     var popupText = function () {
         console.log("yo................")
         $('.flat-row1').each(function () {
             if ($('area').hasClass('popup-text')) {
                 $(".popup-text").magnificPopup({
-                    type: "text",
+                    type: 'inline',
                     tLoading: "Loading text #%curr%...",
                     removalDelay: 600,
                     mainClass: "my-mfp-slide-bottom",
