@@ -89,6 +89,12 @@
     position: relative;
     padding: 50px 0;    
 }
+.flat-row1 {
+    clear: both;
+    display: block;
+    position: relative;
+    padding: 50px 0;
+}
 
 .overlay {
     position: absolute;
@@ -577,6 +583,19 @@
     margin-top: 20px;
 }
 
+/* css */
+.popup{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    background: #0f3e68;
+    transform:scale(0,0);
+    transition: 5s;
+}
+/*
+
+
 /* Flat tabs
 -------------------------------------------------------------- */
 .flat-tabs {
@@ -859,7 +878,9 @@
 }
 
 .promobox.style1 .promobox-title {
-    float: left;
+    /*float: left;*/
+    text-align: center;
+
     margin: 12px 0 8px 0;
 }
 

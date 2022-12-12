@@ -3030,11 +3030,13 @@ blockquote {
 -------------------------------------------------------------- */
 .tp-banner-container{
 	max-height: 530px !important;
+	/* max-height: 50px !important; */
 	width: 100% !important;
 	position: relative;
 	overflow: hidden !important;
 	padding: 0;
 	background-color: #fff;
+	/* background-color: #32bfc0; */
 }
 
 .tp-bullets.simplebullets.navbar {
