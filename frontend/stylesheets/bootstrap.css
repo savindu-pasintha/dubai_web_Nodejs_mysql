@@ -5731,6 +5731,37 @@ button.close {
   -webkit-overflow-scrolling: touch;
   outline: 0;
 }
+.divone{
+  /*background-color: #7685a2;*/
+  width: 80%;
+  height: 95%;
+  margin: auto;
+  top: 50%;
+  left: -28%;
+
+}
+.divone:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.divtwo{
+  /*background-color: #7685a2;*/
+  width: 80%;
+  height: 120%;
+  margin: auto;
+  top: 50%;
+  left: -28%;
+
+}
+.divtwo:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 .modal.fade .modal-dialog {
   -webkit-transition: -webkit-transform .3s ease-out;
        -o-transition:      -o-transform .3s ease-out;
@@ -5755,9 +5786,25 @@ button.close {
   width: auto;
   margin: 10px;
 }
+.center {
+  margin: auto;
+  padding: 10px;
+}
+
+
 .modal-content {
   position: relative;
   background-color: #fff;
+  /*background-color: #1a252f;*/
+  /*height:480px;*/
+  /*width: 950px;*/
+  /*height: 20%;*/
+  width: 180%;
+
+  margin: auto;
+  top: 50%;
+  left: -28%;
+
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
   border: 1px solid #999;
@@ -5799,7 +5846,43 @@ button.close {
 .modal-body {
   position: relative;
   padding: 15px;
+
 }
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 500px;
+  background-color: #FFFFFF;
+}
+
+.column1 {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 600px;
+  background-color: #FFFFFF;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.modal-body1{
+  background-color:blueviolet;
+  width:50%;
+}
+.modal-body2{
+  background-color: pink;
+  width: 50%;
+}
+
 .modal-footer {
   padding: 15px;
   text-align: right;

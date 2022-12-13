@@ -432,7 +432,9 @@
 -------------------------------------------------------------- */
 .blog-shortcode .main-content {
     width: 100%;
+    /*background-color: #ee22fa;*/
 }
+
 
 .blog-shortcode .content-inner {
     margin-top: 50px;
@@ -457,15 +459,17 @@
 .blog-shortcode .blog-post {
     margin-bottom: 40px;
 }
-
 .blog-shortcode .blog-post .entry-cover {
     margin-bottom: 30px;
+
 }
 
+.image{
+    width: 50%;
+}
 .blog-shortcode .blog-post .entry-cover a {
     display: block;
     position: relative;
-    background-color: #21242b;
 }
 
 .blog-shortcode .blog-post .entry-cover a:before {
@@ -552,18 +556,19 @@
     display: inline-block;
     width: 100%;
     margin-bottom: 20px;
+
 }
 
 .blog-shortcode .blog-post .entry-header .entry-time {
     margin: 0 20px 0 0;
     float: left;
-    width: 50px;
+    width: 45px;
     background-color: #ffc952;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     color: #fff;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    height: 50px;
+    height: 40px;
     padding-top: 8px;
     position: relative;
 }
@@ -573,7 +578,7 @@
 }
 
 .blog-shortcode .blog-post .entry-header .entry-title {
-    font-size: 18px;
+    font-size: 15px;
     margin: 0;
     line-height: 1.4;
     overflow: hidden;
