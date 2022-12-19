@@ -959,6 +959,39 @@ a.scheme:hover {
 	background-color: #32bfc0;
 }
 
+/*nav*/
+#mainnav > ul > li.about > a:after,
+#mainnav > ul > li > a:hover:after {
+	width: 60%;
+	background-color: #32bfc0;
+}
+#mainnav > ul > li.service > a:after,
+#mainnav > ul > li > a:hover:after {
+	width: 60%;
+	background-color: #32bfc0;
+}
+#mainnav > ul > li.fleet > a:after,
+#mainnav > ul > li > a:hover:after {
+	width: 60%;
+	background-color: #32bfc0;
+}
+#mainnav > ul > li.news > a:after,
+#mainnav > ul > li > a:hover:after {
+	width: 60%;
+	background-color: #32bfc0;
+}
+#mainnav > ul > li.careers > a:after,
+#mainnav > ul > li > a:hover:after {
+	width: 60%;
+	background-color: #32bfc0;
+}
+#mainnav > ul > li.contact > a:after,
+#mainnav > ul > li > a:hover:after {
+	width: 60%;
+	background-color: #32bfc0;
+}
+/*nav*/
+
 /* submenu */
 #mainnav ul.submenu {
     position: absolute;
@@ -1045,10 +1078,38 @@ a.scheme:hover {
 	right: 18px;
 }
 
+
+
+/*nav*/
 #mainnav > ul > li > a:hover,
 #mainnav > ul > li.home > a {
-   color: #00bac9 ;
+	color: #00bac9 ;
 }
+#mainnav > ul > li > a:hover,
+#mainnav > ul > li.about > a {
+	color: #00bac9 ;
+}
+#mainnav > ul > li > a:hover,
+#mainnav > ul > li.service > a {
+	color: #00bac9 ;
+}
+#mainnav > ul > li > a:hover,
+#mainnav > ul > li.fleet > a {
+	color: #00bac9 ;
+}
+#mainnav > ul > li > a:hover,
+#mainnav > ul > li.news > a {
+	color: #00bac9 ;
+}
+#mainnav > ul > li > a:hover,
+#mainnav > ul > li.careers > a {
+	color: #00bac9 ;
+}
+#mainnav > ul > li > a:hover,
+#mainnav > ul > li.contact > a {
+	color: #00bac9 ;
+}
+/*nav*/
 
 /* Mega Menu */
 #mainnav .has-mega-menu .submenu.mega-menu {
@@ -3045,11 +3106,11 @@ blockquote {
 
 .parallax1 { background-image: url(../images/parallax/bg-parallax1.png); }
 
-.parallax2 { background-image: url(../images/parallax/01.jpeg); }
+.parallax2 { background-image: url(../images/parallax/02.jpeg); }
 
 .parallax3 { background-image: url(../images/parallax/bg-parallax3.jpg); }
 
-.parallax4 { background-image: url(../images/parallax/bg-parallax4.jpeg); }
+.parallax4 { background-image: url(../images/parallax/02.jpeg); }
 
 /* Revolution Slider
 -------------------------------------------------------------- */
