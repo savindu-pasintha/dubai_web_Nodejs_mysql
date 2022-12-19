@@ -2419,6 +2419,31 @@ blockquote {
     color: #fff;
 }
 
+/*services*/
+.footer-widgets .widget.widget_nav_menu_sv ul {
+	display: grid;
+	width: 100%;
+}
+
+.footer-widgets .widget.widget_nav_menu_sv ul li {
+	width: 100%;
+	float: left;
+	position: relative;
+}
+
+.footer-widgets .widget.widget_nav_menu_sv ul li:before {
+	content: "\f105";
+	font-family: "FontAwesome";
+	font-size: 14px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.footer-widgets .widget.widget_nav_menu_sv ul li a:hover {
+	color: #fff;
+}
+/*services*/
+
 .footer-widgets .widget.widget_text.information .textwidget i {
 	color: #32bfc0;
 	margin-right: 13px;
