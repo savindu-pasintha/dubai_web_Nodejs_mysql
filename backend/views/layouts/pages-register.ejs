@@ -127,7 +127,7 @@
                     redirect: 'follow'
                 };
 
-                fetch("http://localhost:5000/api/register", requestOptions)
+                fetch("https://api.salemalmakranicargo.ae/api/register", requestOptions)
                     .then(response => response.json())
                     .then(result => {
                         alert(result.status.data_saved ? "Registerd !" : "Error !");

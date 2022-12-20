@@ -55,11 +55,11 @@ $(document).ready(function() {
 
         shuffle:"off",
 
-        autoHeight:"off",                       
-        forceFullWidth:"off",                       
+        autoHeight:"off",
+        forceFullWidth:"off",
 
         hideThumbsOnMobile:"off",
-        hideNavDelayOnMobile:1500,                      
+        hideNavDelayOnMobile:1500,
         hideBulletsOnMobile:"off",
         hideArrowsOnMobile:"off",
         hideThumbsUnderResolution:0,

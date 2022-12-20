@@ -107,12 +107,12 @@
                     <ul class="metismenu list-unstyled" id="side-menu">
                         <li class="menu-title">Main</li>
 
-                        <li>
+                        <!-- <li>
                             <a href="index.ejs" class="waves-effect">
                                 <i class="ti-home"></i><span class="badge rounded-pill bg-primary float-end">1</span>
                                 <span>Dashboard</span>
                             </a>
-                        </li>
+                        </li> -->
 
                         <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -136,7 +136,7 @@
                             </ul>
                         </li>
 
-                        <li>
+                        <!-- <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect">
                                 <i class="ti-archive"></i>
                                 <span> Authentication </span>
@@ -144,7 +144,7 @@
                             <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="pages-register.ejs">Register 1</a></li>
                             </ul>
-                        </li>
+                        </li> -->
 
                     </ul>
                 </div>
@@ -261,13 +261,6 @@
                                                     <input type="text" class="form-control" id="formenddate"
                                                         placeholder="Enter Date">
                                                 </div>
-
-                                                <div class="mb-3">
-                                                    <label class="form-label" for="formenddate">Image Url</label>
-                                                    <input type="text" class="form-control" id="imageUrl"
-                                                        placeholder="https://example/image.png">
-                                                </div>
-
 
                                                 <div class="inner-repeater mb-4">
                                                     <div data-repeater-list="inner-group" class="inner mb-3">
@@ -402,7 +395,6 @@
                 var l = document.getElementById("formlocation").value;
                 var p = document.getElementById("formposition").value;
                 var e = document.getElementById("formenddate").value;
-                var i = document.getElementById("imageUrl").value;
                 //var r = document.getElementById("formresponsibilities").value;
                 var r = document.getElementsByClassName("responsibility");
                 var responsbilityes = "";
@@ -433,8 +425,7 @@
                     "positions": p,
                     "endDate": e,
                     "resposibilities": responsbilityes,
-                    "qualifications": qualifications,
-                    "image": i
+                    "qualifications": qualifications
                 });
                 var requestOptions = {
                     method: 'POST',
@@ -442,7 +433,7 @@
                     body: raw,
                     redirect: 'follow'
                 };
-                fetch("http://localhost:5000/api/career", requestOptions)
+                fetch("https://api.salemalmakranicargo.ae/api/career", requestOptions)
                     .then(response => response.json())
                     .then(result => {
                         alert(result.status.data_saved ? "Submited !" : "Error !");

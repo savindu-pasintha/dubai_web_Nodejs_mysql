@@ -292,7 +292,7 @@
                     }
                 },
                 getlatlng: {
-                    address: "66 Nicholson St Buffalo New York US",
+                    address: "DP World Building,, Hamriya Port Gate No.2 - Dubai - United Arab Emirates",
                     callback: function (results) {
                         if (!results) return;
                         $(this).gmap3('get').setCenter(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
@@ -489,6 +489,29 @@
         });
     }
 
+
+    var popupText = function () {
+        console.log("yo................")
+        $('.flat-row1').each(function () {
+            if ($('area').hasClass('popup-text')) {
+                $(".popup-text").magnificPopup({
+                    type: 'inline',
+                    tLoading: "Loading text #%curr%...",
+                    removalDelay: 600,
+                    mainClass: "my-mfp-slide-bottom",
+                    gallery: {
+                        enabled: true,
+                        navigateByImgClick: true,
+                        preload: [0, 1]
+                    },
+                    // image: {
+                    //     tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+                    // }
+                });
+            }
+        });
+    }
+
     var flatAccordion = function () {
         var args = { duration: 600 };
         $('.flat-toggle .toggle-title.active').siblings('.toggle-content').show();
@@ -657,6 +680,7 @@
         goTop();
         swClick();
         popupGallery();
+        popupText();
         flatFilterPrice();
         generalSlider();
         portfolioIsotope();
