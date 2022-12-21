@@ -3224,3 +3224,13 @@ blockquote {
     margin-top: -32px;
     background: url(../images/icon/preloader.gif);
 }
+
+/* Fleet style
+-------------------------------------------------------------- */
+.fleet_main {
+	margin-top: 9%;
+}
+.fleet_style {
+	border: 5px solid #3b427f;
+	box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
