@@ -383,9 +383,9 @@
 
     <script src="assets/js/app.js"></script>
 
-    <!-- Data add to database 
+    <!-- Data add to database
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
- 
+
     -->
     <script type="text/javascript">
         $(document).ready(function () {
@@ -433,7 +433,7 @@
                     body: raw,
                     redirect: 'follow'
                 };
-                fetch("https://api.salemalmakranicargo.ae/api/career", requestOptions)
+                fetch("https://api.salemalmakranicargo.net/api/career", requestOptions)
                     .then(response => response.json())
                     .then(result => {
                         alert(result.status.data_saved ? "Submited !" : "Error !");

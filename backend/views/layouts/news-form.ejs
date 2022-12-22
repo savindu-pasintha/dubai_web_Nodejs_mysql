@@ -373,7 +373,7 @@
 
     <!-- Data add to database
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  
+
     -->
     <script type="text/javascript">
         $(document).ready(function () {
@@ -412,7 +412,7 @@
                     redirect: 'follow'
                 };
 
-                fetch("https://api.salemalmakranicargo.ae/api/news", requestOptions)
+                fetch("https://api.salemalmakranicargo.net/api/news", requestOptions)
                     .then(response => response.json())
                     .then(result => {
                         alert(result.status.data_saved ? "Submited !" : "Error !");
