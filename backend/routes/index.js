@@ -20,11 +20,7 @@ router.get('/', async function (req, res, next) {
   api_service.getData("http://localhost:5000/api/news")
     .then((resp) => {
       data = resp.data?.data;
-      if (data.length > 0) {
-        res.render('layouts/news-list', { renderData: data });
-      } else {
-        res.render('layouts/news-list', {});
-      }
+      res.render('layouts/news-list', { renderData: data });
     })
     .catch(e => {
       console.log(e);
@@ -37,11 +33,7 @@ router.get('/news-list.ejs', async function (req, res, next) {
   api_service.getData("http://localhost:5000/api/news")
     .then((resp) => {
       data = resp.data?.data;
-      if (data.length > 0) {
-        res.render('layouts/news-list', { renderData: data });
-      } else {
-        res.render('layouts/news-list', {});
-      }
+      res.render('layouts/news-list', { renderData: data });
     })
     .catch(e => {
       console.log(e);
@@ -59,11 +51,7 @@ router.get('/email-inbox.ejs', function (req, res, next) {
   api_service.getData("http://localhost:5000/api/career")
     .then((resp) => {
       data = resp.data?.data;
-      if (data.length > 0) {
-        res.render('layouts/email-inbox.ejs', { renderData: data });
-      } else {
-        res.render('layouts/email-inbox.ejs', { renderData: [] });;
-      }
+      res.render('layouts/email-inbox.ejs', { renderData: data });
     })
     .catch(e => {
       console.log(e);
