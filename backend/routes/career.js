@@ -51,7 +51,7 @@ router.post('/career', function (req, res, next) {
 
 
 router.get('/career', function (req, res, next) {
-    var query = "SELECT jobTitle,shortDescription,location,positions,endDate,resposibilities,qualifications FROM career";
+    var query = "SELECT id,jobTitle,shortDescription,location,positions,endDate,resposibilities,qualifications FROM career";
     QueryExecute(query)
         .then((result) => {
             if (result.length > 0) {
@@ -60,6 +60,20 @@ router.get('/career', function (req, res, next) {
                 res.status(200).send({ status: false, data: result });
             }
 
+        })
+        .catch((err) => {
+            if (err) {
+                res.status(404).send({ status: false });
+            }
+        });
+
+});
+
+router.delete('/career', function (req, res, next) {
+    var query = "DELETE FROM career WHERE id="+req.body.id;
+    QueryExecute(query)
+        .then((result) => {
+            res.status(200).send({ status: true, data: result });
         })
         .catch((err) => {
             if (err) {

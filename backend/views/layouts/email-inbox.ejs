@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Email Inbox | Veltrix - Admin & Dashboard Template</title>
+    <title>SAMC - Admin Panel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
@@ -54,12 +54,9 @@
                         id="vertical-menu-btn">
                         <i class="mdi mdi-menu"></i>
                     </button>
-
-
                 </div>
 
                 <div class="d-flex">
-
 
                     <div class="dropdown d-none d-md-block ms-2">
                         <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown"
@@ -76,8 +73,6 @@
                             <i class="mdi mdi-fullscreen"></i>
                         </button>
                     </div>
-
-
 
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
@@ -107,13 +102,6 @@
                     <ul class="metismenu list-unstyled" id="side-menu">
                         <li class="menu-title">Main</li>
 
-                        <!-- <li>
-                            <a href="index.ejs" class="waves-effect">
-                                <i class="ti-home"></i><span class="badge rounded-pill bg-primary float-end">1</span>
-                                <span>Dashboard</span>
-                            </a>
-                        </li> -->
-
                         <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect">
                                 <i class="ti-blackboard"></i>
@@ -135,17 +123,6 @@
                                 <li><a href="form-repeater.ejs">Post a Job</a></li>
                             </ul>
                         </li>
-
-                        <!-- <li>
-                            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                <i class="ti-archive"></i>
-                                <span> Authentication </span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="pages-register.ejs">Register 1</a></li>
-                            </ul>
-                        </li> -->
-
                     </ul>
                 </div>
                 <!-- Sidebar -->
@@ -167,36 +144,11 @@
                     <div class="page-title-box">
                         <div class="row align-items-center">
                             <div class="col-md-8">
-                                <h6 class="page-title">Inbox</h6>
-                                <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="#">Veltrix</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Email</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Inbox</li>
-                                </ol>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="float-end d-none d-md-block">
-                                    <div class="dropdown">
-                                        <button class="btn btn-primary  dropdown-toggle" type="button"
-                                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="mdi mdi-cog me-2"></i> Settings
-                                        </button>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Separated link</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <h6 class="page-title">Careers</h6>
                             </div>
                         </div>
                     </div>
                     <!-- end page title -->
-
-
-
 
                     <div class="row">
                         <div class="col-12">
@@ -219,12 +171,9 @@
 
                                 <div class="card">
                                     <div class="btn-toolbar p-3" role="toolbar">
-                                        <div class="btn-group me-2 mb-2 mb-sm-0" ">
+                                        <div class="btn-group me-2 mb-2 mb-sm-0">
                                                 <button type=" button " class=" btn btn-primary waves-light
                                             waves-effect "><i class=" fa fa-inbox "></i></button>
-                                                <button type=" button " class=" btn btn-primary waves-light
-                                            waves-effect "><i class=" far fa-trash-alt "></i></button>
-                                            </div>
                                     </div>
                                 </div>
                                 <ul class=" message-list ">
@@ -243,56 +192,10 @@
                                             <div class=" date "><%= item.endDate %></div>
                                         </div>
                                         <div class=" col-mail col-mail-2 ">
-                                            <div class=" date ">
-                                                <%= item.endDate %></div>
+                                            <button type=" button " value="<%= item.id %>" class=" btn btn-primary waves-light
+                                            waves-effect delete_btn"><i class=" far fa-trash-alt "></i></button>
                                         </div>
                                     </li>
-                                    <!-- li>
-                                        <div class=" col-mail col-mail-1 ">
-                                            <div class=" checkbox-wrapper-mail ">
-                                                <input type=" checkbox " id=" chk19 ">
-                                                <label for=" chk19 " class=" toggle "></label>
-                                            </div>
-                                            <a href=" # " class="
-                                            title ">Warehouse Associate Team Leader</a><span class=" star-toggle far
-                                            fa-star "></span>
-                                        </div>
-                                        <div class=" col-mail col-mail-2 ">
-                                            
-                                            <div class=" date ">Mar 6</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class=" col-mail col-mail-1 ">
-                                            <div class=" checkbox-wrapper-mail ">
-                                                <input type=" checkbox " id=" chk19 ">
-                                                <label for=" chk19 " class=" toggle "></label>
-                                            </div>
-                                            <a href=" # " class="
-                                            title ">Warehouse Operations Supervisor</a><span class=" star-toggle far
-                                            fa-star "></span>
-                                        </div>
-                                        <div class=" col-mail col-mail-2 ">
-                                            
-                                            <div class=" date ">Mar 6</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class=" col-mail col-mail-1 ">
-                                            <div class=" checkbox-wrapper-mail ">
-                                                <input type=" checkbox " id=" chk19 ">
-                                                <label for=" chk19 " class=" toggle "></label>
-                                            </div>
-                                            <a href=" # " class="
-                                            title ">Warehouse Associate Team Leader</a><span class=" star-toggle far
-                                            fa-star "></span>
-                                        </div>
-                                        <div class=" col-mail col-mail-2 ">
-                                            
-                                            <div class=" date ">Mar 6</div>
-                                        </div>
-                                    </li -->
-
                                     <% }); %>
                                 </ul>
 
@@ -359,34 +262,32 @@
 
     <script src=" assets/js/app.js "></script>
 
-    <!--
-
-var D_name = " siva.com"; var D_name_valid=false; if(D_name){ //1 var arr=D_name.split('.'); if(arr.length<=3){
-                                            arr.map((item)=>{
-                                            if(item == 'com'){
-                                            D_name_valid =true
-                                            }
-                                            })
-                                            }
-
-                                            //2
-                                            var dot_count=0,others_count=0;
-                                            arr = D_name.split('com');
-                                            if(arr.length>=2){
-                                            arr.map((item)=>{
-                                            if(item.charAt(item.length-1) == '.' || item.charAt(0) == '.'){
-                                            dot_count=dot_count + 1;
-                                            }else{
-                                            others_count=others_count+1
-                                            }
-                                            })
-
-                                            }
-
-                                            if(dot_count<=2 && ((others_count==1) || (others_count==0 ))){
-                                                D_name_valid=true; } if(D_name_valid){ console.log("sucessfull"); }else{
-                                                console.log("unsucessfull"); } } -->
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".delete_btn").click(function () {
+                var btn_val = $(this).val();
+                
+                var myHeaders = new Headers();
+                myHeaders.append("Content-Type", "application/json");
+                var raw = JSON.stringify({
+                   "id":btn_val
+                });
+                var requestOptions = {
+                    method: 'DELETE',
+                    headers: myHeaders,
+                    body: raw,
+                    redirect: 'follow'
+                };
+                fetch("https://api.salemalmakrani.net/api/career", requestOptions)
+                    .then(response => response.json())
+                    .then(result => {
+                        alert(result.status ? "Deleted !" : "Error !");
+                        console.log(result);
+                    })
+                    .catch(error => console.log('error', error));
+            })
+        })
+        </script>
 </body>
 
 </html>

@@ -49,7 +49,7 @@ router.post('/news', function (req, res, next) {
 });
 
 router.get('/news', function (req, res, next) {
-    var query = "SELECT author,category,shortDescription,newsHead,contentData,blockQuote,image FROM news ";
+    var query = "SELECT id,author,category,shortDescription,newsHead,contentData,blockQuote,image FROM news ";
     QueryExecute(query)
         .then((result) => {
             console.log(result)
@@ -63,6 +63,20 @@ router.get('/news', function (req, res, next) {
         .catch((err) => {
             if (err) {
                 res.status(404).send({ status: err });
+            }
+        });
+
+});
+
+router.delete('/news', function (req, res, next) {
+    var query = "DELETE FROM news WHERE id="+req.body.id;
+    QueryExecute(query)
+        .then((result) => {
+            res.status(200).send({ status: true, data: result });
+        })
+        .catch((err) => {
+            if (err) {
+                res.status(404).send({ status: false });
             }
         });
 

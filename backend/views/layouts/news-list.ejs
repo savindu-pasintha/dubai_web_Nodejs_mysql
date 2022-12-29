@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Email Inbox | Veltrix - Admin & Dashboard Template</title>
+    <title>SAMC - Admin Panel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
@@ -169,11 +169,6 @@
                             <div class="row align-items-center">
                                 <div class="col-md-8">
                                     <h6 class="page-title">Inbox</h6>
-                                    <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="#">SAMC</a></li>
-                                        <li class="breadcrumb-item"><a href="#">News</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">List</li>
-                                    </ol>
                                 </div>
                             </div>
                         </div>
@@ -209,8 +204,6 @@
                                             <div class="btn-group me-2 mb-2 mb-sm-0" ">
                                                 <button type=" button " class=" btn btn-primary waves-light
                                                 waves-effect "><i class=" fa fa-inbox "></i></button>
-                                                <button type=" button " class=" btn btn-primary waves-light
-                                                waves-effect "><i class=" far fa-trash-alt "></i></button>
                                             </div>
                                             
 
@@ -233,7 +226,10 @@
                                                     <a href=" # " class=" subject "><span class=" bg-warning badge me-2 "><%= news.category %></span><%= news.newsHead %>
                                                         <span class=" teaser "><%= news.shortDescription %></span>
                                                     </a>
-                                                    <div class=" date ">Mar 25</div>
+                                                </div>
+                                                <div class=" col-mail col-mail-2 " style="margin-left: 40%;">
+                                                    <button type=" button " value="<%= news.id %>" class=" btn btn-primary waves-light
+                                                    waves-effect delete_btn"><i class=" far fa-trash-alt "></i></button>
                                                 </div>
                                             </li>
                                             <% }); %>
@@ -344,6 +340,33 @@
 
             <script src=" assets/js/app.js "></script>
 
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $(".delete_btn").click(function () {
+                        var btn_val = $(this).val();
+                        console.log(btn_val);
+                        
+                        var myHeaders = new Headers();
+                        myHeaders.append("Content-Type", "application/json");
+                        var raw = JSON.stringify({
+                           "id":btn_val
+                        });
+                        var requestOptions = {
+                            method: 'DELETE',
+                            headers: myHeaders,
+                            body: raw,
+                            redirect: 'follow'
+                        };
+                        fetch("https://api.salemalmakrani.net/api/news", requestOptions)
+                            .then(response => response.json())
+                            .then(result => {
+                                alert(result.status ? "Deleted !" : "Error !");
+                                console.log(result);
+                            })
+                            .catch(error => console.log('error', error));
+                    })
+                })
+                </script>
            </body>
 
 </html>
