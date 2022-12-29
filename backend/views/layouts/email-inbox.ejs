@@ -278,7 +278,7 @@
                     body: raw,
                     redirect: 'follow'
                 };
-                fetch("https://api.salemalmakrani.ne/api/career", requestOptions)
+                fetch("https://api.salemalmakrani.net/api/career", requestOptions)
                     .then(response => response.json())
                     .then(result => {
                         alert(result.status ? "Deleted !" : "Error !");
