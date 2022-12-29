@@ -703,11 +703,10 @@
                 .then(response => response.json())
                 .then(result => {
                     if (result) {
-                        if (result.status) {
+                        if (result) {
                             if (result?.data) {
                                 var all_content = ``;
                                 var desendingOrder = result.data.reverse();
-
                                 for (let i = 0; i < desendingOrder.length; i++) {
                                     var item = result.data[i];
                                     var jobTitle = item?.jobTitle,
